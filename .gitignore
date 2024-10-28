@@ -11,6 +11,5 @@ build
 composeApp/DesktopPlugin.db
 local.properties
 .kotlin
-.gradle
 composeApp/src/androidMain/res/xml
 composeApp/src/commonMain/res/xml

@@ -1,6 +1,5 @@
 import androidx.compose.runtime.mutableStateOf
 import com.zoop.pos.Zoop
-import com.zoop.pos.collection.UserInput
 import com.zoop.pos.collection.UserSelection
 import com.zoop.pos.collection.VoidTransaction
 import com.zoop.pos.exception.ZoopRequestCanceledException
@@ -9,10 +8,8 @@ import com.zoop.pos.plugin.DashboardThemeResponse
 import com.zoop.pos.plugin.DashboardTokenResponse
 import com.zoop.pos.plugin.ZoopFoundationPlugin
 import com.zoop.pos.requestfield.MessageCallbackRequestField
-import com.zoop.pos.requestfield.PinCallbackRequestField
 import com.zoop.pos.requestfield.QRCodeCallbackRequestField
 import com.zoop.pos.requestfield.TransactionIdCallbackRequestField
-import com.zoop.pos.terminal.Terminal
 import com.zoop.pos.type.Callback
 import com.zoop.pos.type.Option
 import com.zoop.pos.type.Request
