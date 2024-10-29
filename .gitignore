@@ -13,3 +13,4 @@ local.properties
 .kotlin
 composeApp/src/androidMain/res/xml
 composeApp/src/commonMain/res/xml
+.fleet
