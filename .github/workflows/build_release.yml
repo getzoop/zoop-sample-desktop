@@ -62,28 +62,31 @@ jobs:
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Download APK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: app-debug
           path: .
+          merge-multiple: true
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Rename Release Assets
+        run: |
+          if ! mv -T \
+            composeApp-debug.apk \
+            app-debug-${{ env.VERSION }}.apk
+          then
+            echo "::error title=APK renaming::Failed to rename the APK asset to add the version suffix."
+            exit 1
+          fi
+
+      - name: Launch Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
+          name: ${{ env.VERSION }}
           tag_name: ${{ env.VERSION }}
-          release_name: ${{ env.VERSION }}
-          draft: false
+          target_commitish: main
+          files: app-debug-${{ env.VERSION }}.apk
+          fail_on_unmatched_files: true
           prerelease: false
-
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: app-debug.apk
-          asset_name: app-debug-${{ env.VERSION }}.apk
-          asset_content_type: application/vnd.android.package-archive
+          draft: false
