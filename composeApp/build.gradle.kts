@@ -50,11 +50,11 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.core)
+            implementation(libs.zoop.pos.plugin.desktop.android)
             implementation("com.github.mik3y:usb-serial-for-android:3.8.0")
         }
 
         commonMain.dependencies {
-            implementation(libs.zoop.pos.plugin.desktop)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -69,6 +69,7 @@ kotlin {
             implementation(compose.desktop.currentOs)
             implementation(libs.androidx.lifecycle.viewmodel.compose)
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
+            implementation(libs.zoop.pos.plugin.desktop.jvm)
         }
     }
 }

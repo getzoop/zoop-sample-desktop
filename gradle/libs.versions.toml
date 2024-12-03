@@ -19,7 +19,7 @@ kotlinx-coroutines = "1.9.0"
 kotlinxCoroutinesCore = "1.6.0"
 lifecycleViewmodelCompose = "2.6.0"
 lifecycleViewmodelKtx = "2.4.0"
-zoopPosPluginDesktop = "1.1.0"
+zoopPosPluginDesktop = "1.1.1"
 
 [libraries]
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
@@ -39,8 +39,8 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
-zoop-pos-plugin-desktop = { module = "br.zoop.pos.plugin:zoop-pos-plugin-desktop", version.ref = "zoopPosPluginDesktop" }
-
+zoop-pos-plugin-desktop-jvm = { module = "br.zoop.pos.plugin:zoop-pos-plugin-desktop-jvm", version.ref = "zoopPosPluginDesktop" }
+zoop-pos-plugin-desktop-android = { module = "br.zoop.pos.plugin:zoop-pos-plugin-desktop-android", version.ref = "zoopPosPluginDesktop" }
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
