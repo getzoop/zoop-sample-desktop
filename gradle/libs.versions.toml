@@ -19,7 +19,7 @@ kotlinx-coroutines = "1.9.0"
 kotlinxCoroutinesCore = "1.6.0"
 lifecycleViewmodelCompose = "2.6.0"
 lifecycleViewmodelKtx = "2.4.0"
-zoopPosPluginDesktop = "1.1.1"
+zoopPosPluginDesktop = "1.1.2"
 
 [libraries]
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
