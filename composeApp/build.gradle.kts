@@ -51,7 +51,6 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.core)
             implementation(libs.zoop.pos.plugin.desktop.android)
-            implementation("com.github.mik3y:usb-serial-for-android:3.8.0")
         }
 
         commonMain.dependencies {
