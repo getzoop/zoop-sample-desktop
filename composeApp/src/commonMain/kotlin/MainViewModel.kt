@@ -290,6 +290,7 @@ class MainViewModel {
 
     private fun void() {
         currentRequest = DesktopPlugin.createVoidRequestBuilder()
+            .option(Option.CREDIT)
             .callback(object : Callback<VoidResponse>() {
                 override fun onStart() {
                     state = state.copy(status = Status.MESSAGE, message = "Processando")
